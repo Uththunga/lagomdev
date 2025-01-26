@@ -21,10 +21,10 @@ export const Button: React.FC<ButtonProps> = ({
           'bg-[#578E7E] text-[#FFFAEC] hover:bg-[#578E7E]/90': variant === 'primary',
           'bg-[#F5ECD5] text-[#3D3D3D] hover:bg-[#F5ECD5]/90': variant === 'secondary',
           'border border-[#FFFAEC]/20 text-[#FFFAEC] hover:bg-[#FFFAEC]/10': variant === 'outline',
-          'px-4 py-2 text-sm': size === 'sm',
-          'px-6 py-3 text-base': size === 'md',
-          'px-8 py-4 text-lg': size === 'lg',
-          'px-8 py-4 text-lg': size === 'xl',
+            'px-4 py-2 text-sm': size === 'sm',
+            'px-6 py-3 text-base': size === 'md',
+            'px-8 py-4 text-lg': size === 'lg',
+            'px-10 py-4 text-lg font-semibold tracking-wide': size === 'xl',
         },
         className
       )}
