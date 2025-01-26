@@ -1,0 +1,17 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<!-- Triangle -->
+	<path
+		d="M50 10 L90 80 L10 80 Z"
+		fill="none"
+		stroke="#578E7E"
+		stroke-width="4"
+	/>
+	
+	<!-- Spiral -->
+	<path
+		d="M50 45 Q60 45 60 50 T50 55 T40 50 T50 45"
+		fill="none"
+		stroke="#578E7E"
+		stroke-width="3"
+	/>
+</svg>

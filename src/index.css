@@ -1,0 +1,29 @@
+@import url('https://rsms.me/inter/inter.css');
+@import './styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: 'Inter var', sans-serif;
+    }
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
