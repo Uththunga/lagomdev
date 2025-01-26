@@ -19,11 +19,11 @@ export const Navigation: React.FC<NavigationProps> = ({ isScrolled }) => {
           <li key={item.label}>
             <a 
               href={item.href}
-              className={`text-sm transition-colors ${
+                className={`text-sm transition-colors ${
                 isScrolled 
-                  ? 'text-gray-600 hover:text-black' 
+                  ? 'text-[#578E7E] hover:text-[#578E7E]/80' 
                   : 'text-white/90 hover:text-white'
-              }`}
+                }`}
             >
               {item.label}
             </a>

@@ -28,7 +28,7 @@ export const ShopSection: React.FC = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#3D3D3D]">
-            Artisanal Tote Bags
+            Premium Tote Bags
           </h2>
           <p className="text-base text-[#3D3D3D]/80 max-w-2xl mx-auto">
             Each piece is meticulously embroidered by our artisans, combining traditional craftsmanship with contemporary design

@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Upload } from 'lucide-react';
+import { CustomOrderForm } from './CustomOrderForm';
 
 export const CustomOrders: React.FC = () => {
   return (
-    <section id="custom" className="relative py-24 bg-[#FFFAEC] overflow-hidden">
+    <section id="custom" className="relative py-12 sm:py-16 md:py-24 bg-[#FFFAEC] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -13,21 +13,21 @@ export const CustomOrders: React.FC = () => {
         }} />
       </div>
 
-      <div className="container-padding relative">
+      <div className="container-padding relative px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12"
           >
-            <span className="inline-block px-4 py-1 mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
+            <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
               Custom Orders
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#3D3D3D]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#3D3D3D]">
               Create Your Perfect Tote
             </h2>
-            <p className="text-lg text-[#3D3D3D]/80 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-[#3D3D3D]/80 max-w-2xl mx-auto">
               Have a unique design in mind? We'll work with you to create a custom tote bag
               that perfectly matches your vision.
             </p>
@@ -37,69 +37,10 @@ export const CustomOrders: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-[#F5ECD5] rounded-2xl p-8 md:p-12 shadow-sm"
+            className="bg-[#F5ECD5] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Form Section */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-[#3D3D3D]">
-                  Tell Us About Your Design
-                </h3>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 bg-[#FFFAEC] border border-[#3D3D3D]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#578E7E]/50"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-2 bg-[#FFFAEC] border border-[#3D3D3D]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#578E7E]/50"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
-                      Design Description
-                    </label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-2 bg-[#FFFAEC] border border-[#3D3D3D]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#578E7E]/50"
-                      placeholder="Describe your design idea..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full py-3 bg-[#578E7E] text-[#FFFAEC] rounded-lg hover:bg-[#578E7E]/90 transition-colors"
-                  >
-                    Submit Request
-                  </button>
-                </form>
-              </div>
-
-              {/* Upload Section */}
-              <div className="flex flex-col items-center justify-center text-center">
-                <div className="w-full aspect-square rounded-xl border-2 border-dashed border-[#3D3D3D]/20 flex flex-col items-center justify-center p-8 bg-[#FFFAEC]">
-                  <Upload className="w-12 h-12 text-[#578E7E] mb-4" />
-                  <h4 className="text-lg font-semibold mb-2 text-[#3D3D3D]">
-                    Upload Your Design
-                  </h4>
-                  <p className="text-[#3D3D3D]/70 mb-6">
-                    Drag and drop your design file here, or click to browse
-                  </p>
-                  <button className="px-6 py-2 bg-[#578E7E]/10 text-[#578E7E] rounded-lg hover:bg-[#578E7E]/20 transition-colors">
-                    Choose File
-                  </button>
-                </div>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <CustomOrderForm />
             </div>
           </motion.div>
         </div>

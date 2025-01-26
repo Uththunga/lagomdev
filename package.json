@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://uththunga.github.io/lagom",
+  "homepage": "https://uththunga.github.io/LAGOM",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

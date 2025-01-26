@@ -22,7 +22,7 @@ const features = [
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative bg-[#3D3D3D] py-24">
+    <section id="about" className="relative bg-[#3D3D3D] py-12 sm:py-16 md:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -31,68 +31,43 @@ export const AboutSection: React.FC = () => {
         }} />
       </div>
 
-      <div className="container-padding relative">
+      <div className="container-padding relative px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-4xl mx-auto text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
+          <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
             Our Story
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#FFFAEC]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#FFFAEC] leading-tight">
             Crafting Beauty with Purpose
           </h2>
-          <p className="text-lg text-[#F5ECD5] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#F5ECD5] max-w-2xl mx-auto px-4 sm:px-0">
             We believe in creating beautiful, functional pieces that tell a story. 
             Our commitment to quality craftsmanship and sustainable practices sets us apart.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto px-4 sm:px-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-[#F5ECD5]/10 backdrop-blur-sm rounded-lg p-8 text-center"
+              className="bg-[#F5ECD5]/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 text-center"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-[#578E7E] text-[#FFFAEC]">
+              <div className="inline-flex items-center justify-center w-12 h-12 mb-4 sm:mb-6 rounded-full bg-[#578E7E] text-[#FFFAEC]">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-[#FFFAEC]">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[#FFFAEC]">
                 {feature.title}
               </h3>
-              <p className="text-[#F5ECD5]/90">
+              <p className="text-sm sm:text-base text-[#F5ECD5]/90">
                 {feature.description}
               </p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-            { number: '500+', label: 'Unique Designs' },
-            { number: '50+', label: 'Artisans' },
-            { number: '1000+', label: 'Happy Customers' },
-            { number: '100%', label: 'Premium Quality' }
-            ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 + index * 0.2 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5ECD5] to-[#578E7E] bg-clip-text text-transparent">
-                {stat.number}
-              </div>
-              <div className="text-[#F5ECD5]/80">
-                {stat.label}
-              </div>
             </motion.div>
           ))}
         </div>

@@ -62,56 +62,9 @@ export const CustomOrderForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-      <div>
-        <div className="mb-8">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Upload Your Design
-          </label>
-          <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-            <div className="text-center">
-              {previewUrl ? (
-                <div className="mb-4">
-                  <img
-                    src={previewUrl}
-                    alt="Design preview"
-                    className="mx-auto max-h-64 rounded-lg object-contain"
-                  />
-                </div>
-              ) : (
-                <Upload
-                  className="mx-auto h-12 w-12 text-gray-300"
-                  aria-hidden="true"
-                />
-              )}
-              <div className="mt-4 flex flex-col items-center text-sm leading-6 text-gray-600">
-                <label
-                  htmlFor="design-upload"
-                  className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                >
-                  <span>{previewUrl ? 'Change design' : 'Upload a design'}</span>
-                  <input
-                    id="design-upload"
-                    type="file"
-                    className="sr-only"
-                    accept="image/*"
-                    {...register('designImage', {
-                      required: 'Please upload your design image'
-                    })}
-                  />
-                </label>
-                <p className="text-xs text-gray-500 mt-2">
-                  PNG, JPG, GIF up to 10MB
-                </p>
-              </div>
-            </div>
-          </div>
-          {errors.designImage && (
-            <p className="mt-2 text-sm text-red-500">{errors.designImage.message}</p>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-6">
           <Input
             label="Name"
             {...register('name', { required: 'Name is required' })}
@@ -129,12 +82,9 @@ export const CustomOrderForm: React.FC = () => {
             })}
             error={errors.email?.message}
           />
-        </div>
-
-        <div className="mb-6">
           <Textarea
             label="Design Details & Requirements"
-            placeholder="Tell us about your design and any specific requirements (size, colors, placement, etc.)..."
+            placeholder="Tell us about your design and any specific requirements..."
             rows={4}
             {...register('designDetails', {
               required: 'Please provide details about your design requirements',
@@ -146,9 +96,54 @@ export const CustomOrderForm: React.FC = () => {
             error={errors.designDetails?.message}
           />
         </div>
+
+        <div>
+          <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
+            Upload Your Design
+          </label>
+          <div className="relative h-[300px] rounded-lg border-2 border-dashed border-[#3D3D3D]/20 bg-[#FFFAEC] hover:border-[#578E7E]/50 transition-colors">
+            <input
+              id="design-upload"
+              type="file"
+              className="sr-only"
+              accept="image/*"
+              {...register('designImage', {
+                required: 'Please upload your design image'
+              })}
+            />
+            <label
+              htmlFor="design-upload"
+              className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer p-4"
+            >
+              {previewUrl ? (
+                <div className="w-full h-full flex flex-col items-center">
+                  <img
+                    src={previewUrl}
+                    alt="Design preview"
+                    className="max-h-[200px] rounded-lg object-contain mb-2"
+                  />
+                  <p className="text-sm text-[#578E7E] font-medium">Click to change design</p>
+                </div>
+              ) : (
+                <>
+                  <Upload className="w-8 h-8 text-[#578E7E] mb-2" />
+                  <p className="text-sm font-medium text-[#3D3D3D] mb-1">
+                    Drag and drop or click to upload
+                  </p>
+                  <p className="text-xs text-[#3D3D3D]/60">
+                    PNG, JPG, GIF up to 10MB
+                  </p>
+                </>
+              )}
+            </label>
+          </div>
+          {errors.designImage && (
+            <p className="mt-2 text-sm text-red-500">{errors.designImage.message}</p>
+          )}
+        </div>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-8">
         <Button 
           type="submit" 
           size="lg"
@@ -173,6 +168,7 @@ export const CustomOrderForm: React.FC = () => {
           )}
         </Button>
       </div>
+
     </form>
   );
 };
