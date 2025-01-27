@@ -12,9 +12,9 @@ interface BagDetailsStepProps {
 export const BagDetailsStep: React.FC<BagDetailsStepProps> = ({ register, errors }) => {
   return (
     <div className="space-y-6">
-      <div className="bg-gray-50 p-4 rounded-lg">
-        <h3 className="font-medium mb-2">Premium Tote Bag Specifications</h3>
-        <ul className="text-sm text-gray-600 space-y-1">
+      <div className="bg-[#F5ECD5]/50 p-4 rounded-lg">
+      <h3 className="font-medium mb-2">Premium Tote Bag Specifications</h3>
+      <ul className="text-sm text-[#3D3D3D]/70 space-y-1">
           <li>• Dimensions: 16"H x 14"W x 4"D</li>
           <li>• Premium canvas material</li>
           <li>• Interior zip pocket</li>
@@ -31,7 +31,7 @@ export const BagDetailsStep: React.FC<BagDetailsStepProps> = ({ register, errors
       />
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
           Embroidery Style Inspiration
         </label>
         <div className="grid grid-cols-2 gap-4">
@@ -41,8 +41,8 @@ export const BagDetailsStep: React.FC<BagDetailsStepProps> = ({ register, errors
               className={`
                 relative border rounded-lg p-4 cursor-pointer transition-all
                 hover:border-black
-                ${errors.designStyle ? 'border-red-300' : 'border-gray-200'}
-                [&:has(input:checked)]:border-black [&:has(input:checked)]:bg-gray-50
+                ${errors.designStyle ? 'border-red-300' : 'border-[#3D3D3D]/20'}
+                [&:has(input:checked)]:border-[#3D3D3D] [&:has(input:checked)]:bg-[#F5ECD5]/50
               `}
             >
               <input

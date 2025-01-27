@@ -29,7 +29,7 @@ export const ProductManager: React.FC = () => {
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-gray-600">
+            <p className="text-[#3D3D3D]/60">
               Manage your product inventory, prices, and details
             </p>
           </div>

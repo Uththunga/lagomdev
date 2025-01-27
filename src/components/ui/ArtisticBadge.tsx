@@ -11,11 +11,11 @@ export const ArtisticBadge: React.FC<ArtisticBadgeProps> = ({ children, classNam
   return (
     <motion.span 
       className={cn(
-        "relative inline-block px-4 py-2",
-        "before:absolute before:inset-0 before:bg-white/10 before:backdrop-blur-sm before:rounded-full",
-        "after:absolute after:inset-0 after:border after:border-white/20 after:rounded-full after:scale-[1.02]",
-        "text-white text-sm tracking-wide",
-        className
+      "relative inline-flex items-center px-4 py-1",
+      "before:absolute before:inset-0 before:bg-[#F5ECD5]/10 before:backdrop-blur-sm before:rounded-full",
+      "after:absolute after:inset-0 after:border after:border-[#F5ECD5]/20 after:rounded-full after:scale-[1.02]",
+      "text-[#F5ECD5] text-sm tracking-wide",
+      className
       )}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}

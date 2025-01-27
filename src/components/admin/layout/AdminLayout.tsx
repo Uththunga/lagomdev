@@ -14,7 +14,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
   breadcrumbs
 }) => {
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[#FFFAEC]">
       <AdminSidebar />
       <div className="flex-1">
         <div className="p-8">

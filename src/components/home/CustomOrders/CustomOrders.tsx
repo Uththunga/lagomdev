@@ -8,7 +8,7 @@ export const CustomOrders: React.FC = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23578E7E' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A76D6D' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '30px 30px'
         }} />
       </div>
@@ -21,7 +21,7 @@ export const CustomOrders: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-8 sm:mb-12"
           >
-            <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
+            <span className="inline-block px-3 py-1 mb-4 sm:mb-6 text-[#A76D6D] bg-[#A76D6D]/10 rounded-full text-sm font-medium">
               Custom Orders
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#3D3D3D]">

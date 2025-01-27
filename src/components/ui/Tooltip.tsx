@@ -32,7 +32,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
       {isVisible && (
         <div
           className={cn(
-            'absolute z-50 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded-md whitespace-nowrap',
+            'absolute z-50 px-2 py-1 text-xs font-medium text-[#F5ECD5] bg-[#3D3D3D] rounded-md whitespace-nowrap',
             'transition-opacity duration-200',
             positionClasses[position]
           )}
@@ -40,7 +40,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
           {content}
           <div
             className={cn(
-              'absolute w-2 h-2 bg-gray-900 transform rotate-45',
+                'absolute w-2 h-2 bg-[#3D3D3D] transform rotate-45',
               position === 'top' && 'bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2',
               position === 'bottom' && 'top-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
               position === 'left' && 'right-0 top-1/2 translate-x-1/2 -translate-y-1/2',

@@ -7,7 +7,7 @@ export const InventoryStats: React.FC = () => {
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      <div className="bg-white p-4 rounded-lg shadow">
+        <div className="bg-[#F5ECD5] p-4 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600">Total Stock</p>
@@ -17,7 +17,7 @@ export const InventoryStats: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white p-4 rounded-lg shadow">
+        <div className="bg-[#F5ECD5] p-4 rounded-lg shadow">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600">Low Stock Items</p>

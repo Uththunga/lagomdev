@@ -35,7 +35,7 @@ export const FeaturedSection: React.FC = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23578E7E' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A76D6D' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '30px 30px'
         }} />
       </div>
@@ -47,7 +47,7 @@ export const FeaturedSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-[#578E7E] bg-[#578E7E]/10 rounded-full text-sm font-medium">
+            <span className="inline-block px-4 py-1 mb-6 text-[#A76D6D] bg-[#A76D6D]/10 rounded-full text-sm font-medium">
             Featured Collection
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#3D3D3D]">
@@ -80,16 +80,16 @@ export const FeaturedSection: React.FC = () => {
                   {product.name}
                 </h3>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[#578E7E] font-bold text-lg">
+                    <span className="text-[#A76D6D] font-bold text-lg">
                     {product.price}
                   </span>
                   <div className="flex items-center text-[#3D3D3D]/70">
-                    <Star className="w-4 h-4 text-[#578E7E] fill-current" />
+                    <Star className="w-4 h-4 text-[#A76D6D] fill-current" />
                     <span className="ml-1 text-sm">{product.rating}</span>
                     <span className="ml-1 text-sm">({product.reviews})</span>
                   </div>
                 </div>
-                <button className="w-full py-2 bg-[#578E7E] text-[#FFFAEC] rounded hover:bg-[#578E7E]/90 transition-colors">
+                <button className="w-full py-2 bg-[#A76D6D] text-[#FFFAEC] rounded hover:bg-[#6B4F4F] transition-colors">
                   View Details
                 </button>
               </div>

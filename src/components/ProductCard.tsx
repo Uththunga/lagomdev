@@ -18,7 +18,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        className="group bg-[#F5ECD5] rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -35,7 +35,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Quick Actions */}
         <div className="absolute top-4 right-4 flex flex-col gap-2">
           <motion.button
-            className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+            className="p-2 bg-[#F5ECD5] rounded-full shadow-lg hover:bg-[#F5ECD5]/90 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -45,7 +45,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         {/* Price Tag */}
         <div className="absolute bottom-4 left-4">
-          <div className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full">
+            <div className="px-4 py-2 bg-[#F5ECD5]/90 backdrop-blur-sm rounded-full">
             <span className="text-lg font-semibold">${product.price}</span>
           </div>
         </div>
@@ -57,7 +57,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         
         <motion.button
           onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
-          className="w-full bg-black text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors"
+            className="w-full bg-[#A76D6D] text-[#F5ECD5] px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#6B4F4F] transition-colors"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >

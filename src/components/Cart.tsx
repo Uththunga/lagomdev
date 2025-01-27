@@ -6,7 +6,7 @@ export const Cart: React.FC = () => {
   const { state, dispatch } = useCart();
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-[#F5ECD5] rounded-lg shadow-md p-6">
       <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
       {state.items.length === 0 ? (
         <p className="text-gray-500">Your cart is empty</p>
@@ -61,7 +61,7 @@ export const Cart: React.FC = () => {
               <span>Total:</span>
               <span>${state.total.toFixed(2)}</span>
             </div>
-            <button className="w-full mt-4 bg-black text-white py-3 rounded-md hover:bg-gray-800 transition-colors">
+            <button className="w-full mt-4 bg-[#A76D6D] text-[#F5ECD5] py-3 rounded-md hover:bg-[#6B4F4F] transition-colors">
               Checkout
             </button>
           </div>

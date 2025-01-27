@@ -8,35 +8,35 @@ interface MobileMenuProps {
 
 const navItems = [
   { label: 'Shop', href: '#shop' },
-  { label: 'Collections', href: '#collections' },
   { label: 'About', href: '#about' },
   { label: 'Custom Orders', href: '#custom' },
 ];
+
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className="md:hidden">
-      <button
+        <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "p-2 transition-colors",
-          isScrolled ? "text-[#578E7E]" : "text-white"
+          "p-1.5 transition-colors",
+          isScrolled ? "text-[#2D2D2D]" : "text-[#2D2D2D]"
         )}
         >
-        <Menu size={24} />
+        <Menu size={20} />
         </button>
 
         {isOpen && (
         <div className="fixed inset-0 z-50 bg-[#F5ECD5] backdrop-blur-md">
           <div className="h-full flex flex-col">
-          <div className="h-20 flex items-center justify-end px-4">
+            <div className="h-16 flex items-center justify-end px-4">
             <button
             onClick={() => setIsOpen(false)}
-            className="p-2 text-[#578E7E]"
+            className="p-1.5 text-[#2D2D2D]"
             >
-            <X size={24} />
+            <X size={20} />
             </button>
           </div>
 
@@ -47,7 +47,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isScrolled }) => {
               <a
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-2xl text-[#578E7E] hover:text-[#578E7E]/80 transition-colors"
+                className="text-2xl text-[#2D2D2D] hover:text-[#8B4513] transition-colors"
                     >
                       {item.label}
                     </a>

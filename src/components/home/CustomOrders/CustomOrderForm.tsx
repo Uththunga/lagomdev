@@ -101,7 +101,7 @@ export const CustomOrderForm: React.FC = () => {
           <label className="block text-sm font-medium text-[#3D3D3D] mb-2">
             Upload Your Design
           </label>
-          <div className="relative h-[300px] rounded-lg border-2 border-dashed border-[#3D3D3D]/20 bg-[#FFFAEC] hover:border-[#578E7E]/50 transition-colors">
+            <div className="relative h-[300px] rounded-lg border-2 border-dashed border-[#3D3D3D]/20 bg-[#FFFAEC] hover:border-[#A76D6D]/50 transition-colors">
             <input
               id="design-upload"
               type="file"
@@ -122,11 +122,11 @@ export const CustomOrderForm: React.FC = () => {
                     alt="Design preview"
                     className="max-h-[200px] rounded-lg object-contain mb-2"
                   />
-                  <p className="text-sm text-[#578E7E] font-medium">Click to change design</p>
+                    <p className="text-sm text-[#A76D6D] font-medium">Click to change design</p>
                 </div>
               ) : (
                 <>
-                  <Upload className="w-8 h-8 text-[#578E7E] mb-2" />
+                    <Upload className="w-8 h-8 text-[#A76D6D] mb-2" />
                   <p className="text-sm font-medium text-[#3D3D3D] mb-1">
                     Drag and drop or click to upload
                   </p>

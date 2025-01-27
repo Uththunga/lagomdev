@@ -3,7 +3,7 @@
 	<path
 		d="M50 10 L90 80 L10 80 Z"
 		fill="none"
-		stroke="#578E7E"
+		stroke="#A76D6D"
 		stroke-width="4"
 	/>
 	
@@ -11,7 +11,7 @@
 	<path
 		d="M50 45 Q60 45 60 50 T50 55 T40 50 T50 45"
 		fill="none"
-		stroke="#578E7E"
+		stroke="#A76D6D"
 		stroke-width="3"
 	/>
 </svg>

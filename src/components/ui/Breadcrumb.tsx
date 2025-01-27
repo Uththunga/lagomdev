@@ -16,16 +16,16 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       <ol className="flex items-center space-x-2">
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
-            {index > 0 && <ChevronRight size={16} className="mx-2 text-gray-400" />}
+            {index > 0 && <ChevronRight size={16} className="mx-2 text-[#3D3D3D]/40" />}
             {item.href ? (
               <a
-                href={item.href}
-                className="text-sm font-medium text-gray-500 hover:text-gray-700"
+              href={item.href}
+              className="text-sm font-medium text-[#3D3D3D]/70 hover:text-[#A76D6D]"
               >
-                {item.label}
+              {item.label}
               </a>
             ) : (
-              <span className="text-sm font-medium text-gray-900">{item.label}</span>
+              <span className="text-sm font-medium text-[#3D3D3D]">{item.label}</span>
             )}
           </li>
         ))}

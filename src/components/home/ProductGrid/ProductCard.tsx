@@ -25,9 +25,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="absolute inset-0 bg-white rounded-lg -z-10 shadow-sm" />
       
       {/* Product Image */}
-      <div className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
+        <div className="relative aspect-square overflow-hidden rounded-lg bg-[#F5ECD5]/50">
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+          <div className="absolute inset-0 bg-[#F5ECD5]/50 animate-pulse" />
         )}
         <img
           src={product.image}
@@ -45,7 +45,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
           <button
             onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
-            className="w-full bg-[#578E7E] text-[#FFFAEC] py-2 rounded-md flex items-center justify-center gap-2 text-sm"
+            className="w-full bg-[#A76D6D] text-[#FFFAEC] py-2 rounded-md flex items-center justify-center gap-2 text-sm"
           >
             <ShoppingBag className="w-4 h-4" />
             Add to Cart
@@ -56,7 +56,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Product Info */}
       <div className="p-3">
         <h3 className="font-medium text-[#3D3D3D] mb-1 truncate">{product.name}</h3>
-        <p className="text-[#578E7E] font-medium">{formatCurrency(product.price)}</p>
+        <p className="text-[#A76D6D] font-medium">{formatCurrency(product.price)}</p>
       </div>
     </motion.div>
   );

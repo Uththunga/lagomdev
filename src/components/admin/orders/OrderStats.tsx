@@ -18,13 +18,13 @@ export const OrderStats: React.FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {cards.map((card, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow">
+        <div key={index} className="bg-[#F5ECD5] p-6 rounded-lg shadow">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600">{card.title}</p>
-              <p className="text-2xl font-bold mt-1">{card.value}</p>
-            </div>
-            <card.icon className="w-8 h-8 text-gray-400" />
+                <p className="text-sm text-[#3D3D3D]/70">{card.title}</p>
+                <p className="text-2xl font-bold mt-1">{card.value}</p>
+              </div>
+              <card.icon className="w-8 h-8 text-[#A76D6D]/70" />
           </div>
         </div>
       ))}

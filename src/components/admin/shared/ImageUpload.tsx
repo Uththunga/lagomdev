@@ -23,7 +23,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ label, onChange }) => 
 
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700">{label}</label>
+        <label className="block text-sm font-medium text-[#3D3D3D]">{label}</label>
       <div className="flex flex-wrap gap-4">
         {images.map((url, index) => (
           <div key={index} className="relative">
@@ -47,7 +47,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({ label, onChange }) => 
             className="hidden"
             onChange={handleUpload}
           />
-          <Upload className="w-6 h-6 text-gray-400" />
+            <Upload className="w-6 h-6 text-[#A76D6D]/70" />
         </label>
       </div>
     </div>

@@ -8,7 +8,7 @@ export const SalesChart: React.FC = () => {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
+    <div className="bg-[#F5ECD5] p-6 rounded-lg shadow">
       <h3 className="text-lg font-semibold mb-4">Sales Overview</h3>
       <div className="h-64">
         {/* Chart implementation */}

@@ -36,7 +36,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
   });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-white p-6 rounded-lg shadow">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-[#F5ECD5] p-6 rounded-lg shadow">
       <div className="space-y-4">
         <Input
           label="Product Name"
@@ -65,8 +65,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             label={
               <div className="flex items-center gap-2">
                 Stock
-                <Tooltip content="Current available quantity">
-                  <Info size={16} className="text-gray-400" />
+                <Tooltip content="Current available quantity" className="text-[#3D3D3D]">
+                  <Info size={16} className="text-[#A76D6D]/70" />
                 </Tooltip>
               </div>
             }
