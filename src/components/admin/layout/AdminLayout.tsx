@@ -1,30 +1,58 @@
 import React from 'react';
+import { ChevronRight } from 'lucide-react';
 import { AdminSidebar } from '../AdminSidebar';
-import { Breadcrumb } from '../../ui/Breadcrumb';
+
+interface Breadcrumb {
+  label: string;
+  href?: string;
+}
 
 interface AdminLayoutProps {
   children: React.ReactNode;
   title: string;
-  breadcrumbs: Array<{ label: string; href?: string; }>;
+  breadcrumbs: Breadcrumb[];
 }
 
 export const AdminLayout: React.FC<AdminLayoutProps> = ({
   children,
   title,
-  breadcrumbs
+  breadcrumbs,
 }) => {
   return (
     <div className="flex min-h-screen bg-[#FFFAEC]">
       <AdminSidebar />
       <div className="flex-1">
-        <div className="p-8">
-          <div className="mb-8">
-            <Breadcrumb items={breadcrumbs} />
-            <h1 className="text-2xl font-bold mt-4">{title}</h1>
-          </div>
-          {children}
-        </div>
-      </div>
+      <div className="p-6">
+      {/* Breadcrumbs */}
+      <nav className="mb-4">
+        <ol className="flex items-center space-x-2 text-sm">
+          {breadcrumbs.map((crumb, index) => (
+            <React.Fragment key={crumb.label}>
+              {index > 0 && (
+                <ChevronRight className="w-4 h-4 text-[#3D3D3D]/40" />
+              )}
+              {crumb.href ? (
+                <a
+                  href={crumb.href}
+                  className="text-[#3D3D3D]/60 hover:text-[#A76D6D]"
+                >
+                  {crumb.label}
+                </a>
+              ) : (
+                <span className="text-[#3D3D3D]">{crumb.label}</span>
+              )}
+            </React.Fragment>
+          ))}
+        </ol>
+      </nav>
+
+      {/* Title */}
+      <h1 className="text-2xl font-bold text-[#3D3D3D] mb-6">{title}</h1>
+
+      {/* Content */}
+      {children}
     </div>
+    </div>
+  </div>
   );
 };
